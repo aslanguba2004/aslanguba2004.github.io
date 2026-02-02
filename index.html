@@ -6,10 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -30,7 +26,7 @@
     header {
       background-color: #1A1A24;
       color: #d1d5db;
-      padding: 30px 20px 20px;
+      padding: 40px 20px 25px;
       text-align: center;
       border-bottom: 1px solid #2a2d36;
     }
@@ -39,30 +35,22 @@
       margin-bottom: 10px;
     }
 
-    /* ===== Interactive Chapter Panel ===== */
-    .chapter-panel {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+    /* Simple chapter links */
+    .chapters {
+      margin-top: 10px;
     }
 
-    .chapter-panel a {
-      padding: 8px 14px;
-      border-radius: 6px;
-      background-color: #111318;
-      color: #e5e7eb;
+    .chapters a {
+      margin: 0 10px;
       font-weight: bold;
-      transition: all 0.2s ease;
-      border: 1px solid #2a2d36;
+      color: #e5e7eb;
       text-decoration: none;
+      transition: color 0.15s ease, text-shadow 0.15s ease;
     }
 
-    .chapter-panel a:hover {
+    .chapters a:hover {
       color: #60a5fa;
-      box-shadow: 0 0 10px rgba(96,165,250,0.6);
-      border-color: #60a5fa;
+      text-shadow: 0 0 6px rgba(96, 165, 250, 0.9); /* simple blue glow */
     }
 
     main {
@@ -111,8 +99,8 @@
   <h1>Fake News & Social Engineering Awareness</h1>
   <p>Understanding online manipulation and learning how to stay safe</p>
 
-  <!-- Interactive Chapter Panel -->
-  <div class="chapter-panel">
+  <!-- Simple chapter links -->
+  <div class="chapters">
     <a href="#about">About</a>
     <a href="#examples">Scam Examples</a>
     <a href="#tactics">Tactics</a>
@@ -191,7 +179,7 @@
 </main>
 
 <footer>
-  <p>Educational project on digital literacy and online safety</p>
+  <p>Educational project on digital literacy and online safety, 2026</p>
 </footer>
 
 </body>
