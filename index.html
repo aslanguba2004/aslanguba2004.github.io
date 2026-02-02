@@ -6,79 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* ===== Global ===== */
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #262E3B;
-      color: #d1d5db;
+      background-color: #f4f6f8;
+      color: #222;
       line-height: 1.6;
-      scroll-behavior: smooth;
     }
 
-    a {
-      color: #60a5fa;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== Header ===== */
     header {
-      background-color: #1A1A24;
-      color: #d1d5db;
-      padding: 40px 20px 25px;
+      background-color: #1f2933;
+      color: white;
+      padding: 40px 20px;
       text-align: center;
-      border-bottom: 1px solid #2a2d36;
     }
 
     header h1 {
       margin-bottom: 10px;
     }
 
-    /* ===== Navigation ===== */
-    .chapter-nav {
-      margin-top: 15px;
+    nav {
+      background-color: #111827;
+      padding: 10px;
+      text-align: center;
     }
 
-    .chapter-nav a {
-      color: #d1d5db;
+    nav a {
+      color: #e5e7eb;
       margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.2s ease;
     }
 
-    .chapter-nav a:hover {
-      color: #60a5fa;
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    /* ===== Main Layout ===== */
     main {
       max-width: 900px;
       margin: auto;
       padding: 30px 20px;
-      display: block;
     }
 
     section {
-      background-color: #1A1A24;
+      background: white;
       margin-bottom: 30px;
       padding: 25px;
       border-radius: 8px;
-      border: 1px solid #2a2d36;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     section h2 {
-      color: #f9fafb;
+      color: #1f2933;
       margin-top: 0;
     }
 
-    /* ===== Scam Cards ===== */
     .scam {
-      border-left: 5px solid #3b82f6;
+      border-left: 5px solid #2563eb;
       padding-left: 15px;
       margin-top: 20px;
     }
@@ -87,35 +71,12 @@
       padding-left: 20px;
     }
 
-    /* ===== Footer ===== */
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #262E3B;
-      color: #d1d5db;
-      font-size: 14px;
-      border-top: 1px solid #2a2d36;
-    }
-
-    /* ===== Scroll To Top Button ===== */
-    #toTopBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #111318;
+      background-color: #1f2933;
       color: #e5e7eb;
-      border: 1px solid #2a2d36;
-      padding: 10px 14px;
-      cursor: pointer;
       font-size: 14px;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-    }
-
-    #toTopBtn:hover {
-      color: #60a5fa;
-      box-shadow: 0 0 6px rgba(96, 165, 250, 0.7);
     }
   </style>
 </head>
@@ -125,15 +86,15 @@
 <header>
   <h1>Fake News & Social Engineering Awareness</h1>
   <p>Understanding online manipulation and learning how to stay safe</p>
-
-  <nav class="chapter-nav">
-    <a href="#about">About</a>
-    <a href="#examples">Examples</a>
-    <a href="#tactics">Tactics</a>
-    <a href="#protection">Protection</a>
-    <a href="#resources">Resources</a>
-  </nav>
 </header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#examples">Scam Examples</a>
+  <a href="#tactics">Tactics</a>
+  <a href="#protection">Protection</a>
+  <a href="#resources">Resources</a>
+</nav>
 
 <main>
 
@@ -195,39 +156,18 @@
 <section id="resources">
   <h2>Useful Resources</h2>
   <ul>
-    <li><a href="https://www.snopes.com" target="_blank">Snopes</a></li>
-    <li><a href="https://www.factcheck.org" target="_blank">FactCheck.org</a></li>
-    <li><a href="https://haveibeenpwned.com" target="_blank">Have I Been Pwned</a></li>
-    <li><a href="https://www.europol.europa.eu" target="_blank">Europol Online Scams</a></li>
+    <li>Snopes – https://www.snopes.com</li>
+    <li>FactCheck.org – https://www.factcheck.org</li>
+    <li>Have I Been Pwned – https://haveibeenpwned.com</li>
+    <li>Europol Online Scams – https://www.europol.europa.eu</li>
   </ul>
 </section>
 
 </main>
 
 <footer>
-  <p>Educational project on digital literacy and online safety, 2026</p>
+  <p>Educational project on digital literacy and online safety</p>
 </footer>
-
-<button id="toTopBtn" onclick="scrollToTop()">Top</button>
-
-<script>
-  const toTopBtn = document.getElementById("toTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      toTopBtn.style.display = "block";
-    } else {
-      toTopBtn.style.display = "none";
-    }
-  });
-
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-</script>
 
 </body>
 </html>
