@@ -6,29 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-
-.chapter-nav {
-  margin-top: 15px;
-}
-
-.chapter-nav a {
-  color: #d1d5db;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s ease;
-}
-
-.chapter-nav a:hover {
-  color: #60a5fa;
-}
-    
+    /* ===== Global ===== */
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #262E3B; /* HLTV-like dark background */
+      background-color: #262E3B;
       color: #d1d5db;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     a {
@@ -40,6 +25,7 @@
       text-decoration: underline;
     }
 
+    /* ===== Header ===== */
     header {
       background-color: #1A1A24;
       color: #d1d5db;
@@ -52,27 +38,29 @@
       margin-bottom: 10px;
     }
 
-    .chapters {
-      margin-top: 10px;
+    /* ===== Navigation ===== */
+    .chapter-nav {
+      margin-top: 15px;
     }
 
-    .chapters a {
-      margin: 0 10px;
-      font-weight: bold;
-      color: #e5e7eb;
+    .chapter-nav a {
+      color: #d1d5db;
+      margin: 0 12px;
       text-decoration: none;
-      transition: color 0.15s ease, text-shadow 0.15s ease;
+      font-weight: bold;
+      transition: color 0.2s ease;
     }
 
-    .chapters a:hover {
+    .chapter-nav a:hover {
       color: #60a5fa;
-      text-shadow: 0 0 6px rgba(96, 165, 250, 0.9);
     }
-    
+
+    /* ===== Main Layout ===== */
     main {
       max-width: 900px;
       margin: auto;
       padding: 30px 20px;
+      display: block;
     }
 
     section {
@@ -88,6 +76,7 @@
       margin-top: 0;
     }
 
+    /* ===== Scam Cards ===== */
     .scam {
       border-left: 5px solid #3b82f6;
       padding-left: 15px;
@@ -98,6 +87,7 @@
       padding-left: 20px;
     }
 
+    /* ===== Footer ===== */
     footer {
       text-align: center;
       padding: 20px;
@@ -107,18 +97,20 @@
       border-top: 1px solid #2a2d36;
     }
 
-    /* Scroll to top button */
+    /* ===== Scroll To Top Button ===== */
     #toTopBtn {
-      display: none; /* hidden by default */
+      display: none;
       position: fixed;
       bottom: 20px;
       right: 20px;
       background-color: #111318;
       color: #e5e7eb;
       border: 1px solid #2a2d36;
-      padding: 8px 12px;
+      padding: 10px 14px;
       cursor: pointer;
       font-size: 14px;
+      border-radius: 6px;
+      transition: all 0.2s ease;
     }
 
     #toTopBtn:hover {
@@ -216,23 +208,24 @@
   <p>Educational project on digital literacy and online safety, 2026</p>
 </footer>
 
-<!-- Scroll to top button -->
 <button id="toTopBtn" onclick="scrollToTop()">Top</button>
 
 <script>
   const toTopBtn = document.getElementById("toTopBtn");
 
-  window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
       toTopBtn.style.display = "block";
     } else {
       toTopBtn.style.display = "none";
     }
-  };
+  });
 
   function scrollToTop() {
-    document.body.scrollTop = 0;            // Safari
-    document.documentElement.scrollTop = 0; // Chrome, Firefox, Edge
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   }
 </script>
 
