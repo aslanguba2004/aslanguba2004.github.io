@@ -6,91 +6,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #262E3B; /* HLTV-like dark background */
-    color: #d1d5db;
-    line-height: 1.6;
-  }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #262E3B; /* HLTV-like dark background */
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
     a {
-  color: #60a5fa;
-  text-decoration: none;
-}
+      color: #60a5fa;
+      text-decoration: none;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    a:hover {
+      text-decoration: underline;
+    }
 
-  header {
-    background-color: #1A1A24;
-    color: #d1d5db;
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 1px solid #2a2d36;
-  }
+    header {
+      background-color: #1A1A24;
+      color: #d1d5db;
+      padding: 30px 20px 20px;
+      text-align: center;
+      border-bottom: 1px solid #2a2d36;
+    }
 
-  header h1 {
-    margin-bottom: 10px;
-  }
+    header h1 {
+      margin-bottom: 10px;
+    }
 
-  nav {
-    background-color: #111318;
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #2a2d36;
-  }
+    /* ===== Interactive Chapter Panel ===== */
+    .chapter-panel {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
 
-  nav a {
-    color: #e5e7eb;
-    margin: 0 14px;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    .chapter-panel a {
+      padding: 8px 14px;
+      border-radius: 6px;
+      background-color: #111318;
+      color: #e5e7eb;
+      font-weight: bold;
+      transition: all 0.2s ease;
+      border: 1px solid #2a2d36;
+      text-decoration: none;
+    }
 
-  nav a:hover {
-    color: #60a5fa;
-  }
+    .chapter-panel a:hover {
+      color: #60a5fa;
+      box-shadow: 0 0 10px rgba(96,165,250,0.6);
+      border-color: #60a5fa;
+    }
 
-  main {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px 20px;
-  }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
 
-  section {
-    background-color: #1A1A24;
-    margin-bottom: 30px;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    border: 1px solid #2a2d36;
-  }
+    section {
+      background-color: #1A1A24;
+      margin-bottom: 30px;
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid #2a2d36;
+    }
 
-  section h2 {
-    color: #f9fafb;
-    margin-top: 0;
-  }
+    section h2 {
+      color: #f9fafb;
+      margin-top: 0;
+    }
 
-  .scam {
-    border-left: 5px solid #3b82f6;
-    padding-left: 15px;
-    margin-top: 20px;
-  }
+    .scam {
+      border-left: 5px solid #3b82f6;
+      padding-left: 15px;
+      margin-top: 20px;
+    }
 
-  ul {
-    padding-left: 20px;
-  }
+    ul {
+      padding-left: 20px;
+    }
 
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #262E3B;
-    color: #d1d5db;
-    font-size: 14px;
-    border-top: 1px solid #2a2d36;
-  }
-</style>
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #262E3B;
+      color: #d1d5db;
+      font-size: 14px;
+      border-top: 1px solid #2a2d36;
+    }
+  </style>
 </head>
 
 <body>
@@ -98,6 +110,15 @@ a:hover {
 <header>
   <h1>Fake News & Social Engineering Awareness</h1>
   <p>Understanding online manipulation and learning how to stay safe</p>
+
+  <!-- Interactive Chapter Panel -->
+  <div class="chapter-panel">
+    <a href="#about">About</a>
+    <a href="#examples">Scam Examples</a>
+    <a href="#tactics">Tactics</a>
+    <a href="#protection">Protection</a>
+    <a href="#resources">Resources</a>
+  </div>
 </header>
 
 <main>
@@ -160,22 +181,18 @@ a:hover {
 <section id="resources">
   <h2>Useful Resources</h2>
   <ul>
-    <li>
-      <a href="https://www.snopes.com" target="_blank">Snopes</a>
-    </li>
-    <li>
-      <a href="https://www.factcheck.org" target="_blank">FactCheck.org</a>
-    </li>
-    <li>
-      <a href="https://haveibeenpwned.com" target="_blank">Have I Been Pwned</a>
-    </li>
-    <li>
-      <a href="https://www.europol.europa.eu" target="_blank">Europol Online Scams</a>
-    </li>
+    <li><a href="https://www.snopes.com" target="_blank">Snopes</a></li>
+    <li><a href="https://www.factcheck.org" target="_blank">FactCheck.org</a></li>
+    <li><a href="https://haveibeenpwned.com" target="_blank">Have I Been Pwned</a></li>
+    <li><a href="https://www.europol.europa.eu" target="_blank">Europol Online Scams</a></li>
   </ul>
 </section>
 
 </main>
+
+<footer>
+  <p>Educational project on digital literacy and online safety</p>
+</footer>
 
 </body>
 </html>
